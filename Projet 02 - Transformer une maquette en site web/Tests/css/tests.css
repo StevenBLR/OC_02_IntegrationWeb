@@ -1,0 +1,39 @@
+.myButton {
+	background-color : #f6f6f6;
+	border-radius: 17px 0px 0px 17px ;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 24px;
+    text-decoration:none;
+    height: 20px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+    top:1px;
+    
+}
+
+.pinIcon{
+    height: 20px;
+}
+.hotels{
+	display: flex;
+	align-content: stretch;
+	background-color: lightgray;
+	height: 200px;
+}
+
+.hotels--current{
+	display: flex;
+	background-color: grey;
+	width:50vh;
+	height: 50px;
+}

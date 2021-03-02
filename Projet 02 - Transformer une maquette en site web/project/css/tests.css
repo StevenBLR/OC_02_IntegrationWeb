@@ -12,33 +12,41 @@ body {
 	min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
   }
 
-header{
-	background-color: lightpink;
+/* Hebergements */
+.wrapper {
+	display: block; /* IE fix */
+	flex: 1 1 auto; /* occupe la hauteur restante */
+	display: flex; /* crée un contexte flex pour ses enfants */
+	flex-direction: row; /* Affichage gauche --> droite */
+	background-color: lightgray;
 }
 
 nav {
-	width: 15em;
+	width: 20em;
+}
+
+.content {
+	display: block; /* IE fix */
+	flex: 1; /* occupe la largeur restante */
+}
+
+header{
+	background-color: lightpink;
 }
 
 .search{
 	background-color: lightgreen;
 }
 
-.hotels{
-	display: block; /* IE fix */
-  	flex: 1 1 auto; /* occupe la hauteur restante */
-  	display: flex; /* crée un contexte flex pour ses enfants */
-  	flex-direction: row; /* affichage horizontal */
-	background-color: lightgray;
-}
-
 .hotels--current{
 	display: block; /* IE fix */
 	flex: 1; /* occupe la largeur restante */
+	margin: 10px;
 	border: 1px solid blue;
 }
 
 .hotels--popular{
+	margin: 10px;
   	border: 1px solid red;
 }
 

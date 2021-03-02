@@ -12,6 +12,8 @@ body {
 	min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
   }
 
+
+
 /* Hebergements */
 .wrapper {
 	display: block; /* IE fix */
@@ -39,6 +41,7 @@ header{
 }
 
 .hotels--current{
+	order: 1;
 	display: block; /* IE fix */
 	flex: 1; /* occupe la largeur restante */
 	margin: 10px;
@@ -46,6 +49,7 @@ header{
 }
 
 .hotels--popular{
+	order: 2;
 	margin: 10px;
   	border: 1px solid red;
 }
@@ -62,4 +66,18 @@ header{
 	padding:75px 100px;
 	text-decoration:none;
 	clip-path: url(../imgs/testImg.jpg);
+}
+
+/* Footer */
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: lightsalmon;
+}
+
+.footerItem{
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
 }

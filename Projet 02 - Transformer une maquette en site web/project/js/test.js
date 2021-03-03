@@ -101,15 +101,14 @@ var activities = [
 
 var eltHeader = document.getElementById("header");
 
-
 //#region Html presets
 var desktopHeader = '<div class="headerDesktop">\
 <div class="logoArea">\
     <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">\
 </div>\
 <div class="headerMenuArea">\
-    <a href="#" class="headerMenuItem">Hébergements</a>\
-    <a href="#" class="headerMenuItem">Activités</a>\
+    <a href="#Hotels" class="headerMenuItem">Hébergements</a>\
+    <a href="#Activities" class="headerMenuItem">Activités</a>\
     <a href="#" class="headerMenuItem">S\'inscrire</a>\
 </div>\
 </div>';
@@ -122,11 +121,9 @@ var mobileHeader = '<div class="headerDesktop">\
     <a href="#" class="headerMenuItem">S\'inscrire</a>\
 </div>\
 </div>\
-<div>\
 <div class="headerMobileMenu">\
-    <a href="#" class="headerMobileItem">Hébergements</a>\
-    <a href="#" class="headerMobileItem">Activités</a>\
-</div>\
+    <a href="#Hotels" class="headerMobileItem">Hébergements</a>\
+    <a href="#Activities" class="headerMobileItem">Activités</a>\
 </div>';
 
 //#endregion 
@@ -134,24 +131,11 @@ var mobileHeader = '<div class="headerDesktop">\
 // Modification de l'UI desktop --> Mobile
 // Variable vraie si condition >= et fausse si <
 const mediaQuery = window.matchMedia('(max-width: 800px)')
-mediaQuery.addListener(switchUI);
+mediaQuery.addListener(switchHeader);
 
-function switchUI(){
-    if (mediaQuery.matches) { // Version Mobile
-      eltHeader.innerHTML = mobileHeader;
-
-      /* Debug
-      document.body.style.backgroundColor = "yellow";
-      console.error("Mobile");
-      */
-    } 
-    else {  // Version Bureau
-      eltHeader.innerHTML = desktopHeader;
-      /* Debug
-      console.error("Desktop");
-      document.body.style.backgroundColor = "pink";
-      */
-    }
+function switchHeader(){
+    if (mediaQuery.matches) eltHeader.innerHTML = mobileHeader; // Version Mobile
+    else eltHeader.innerHTML = desktopHeader; // Version Bureau
 }
 
 

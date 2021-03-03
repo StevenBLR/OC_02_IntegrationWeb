@@ -1,108 +1,100 @@
 <!doctype html>
 <html>
 
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/tests.css">
-    <title>Tests</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/tests.css">
+        <title>Tests</title>
+    </head>
 
-<body>
-    <header id="header">
-        <div class="headerDesktop">
-            <div class="logoArea">
-                <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">
+    <body>
+        <header id="header">
+            <div class="headerDesktop">
+                <div class="logoArea">
+                    <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">
+                </div>
+                <div id="headerMenuArea" class="headerMenuArea">
+                    <a href="#Hotels" class="headerMenuItem">Hébergements</a>
+                    <a href="#Activities" class="headerMenuItem">Activités</a>
+                    <a href="#" class="headerMenuItem">S'inscrire</a>
+                </div>
             </div>
-            <div id="headerMenuArea" class="headerMenuArea">
-                <a href="#" class="headerMenuItem">Hébergements</a>
-                <a href="#" class="headerMenuItem">Activités</a>
-                <a href="#" class="headerMenuItem">S'inscrire</a>
+        </header>
+
+        <div class="search">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <h2>En plein centre ville ou en pleine nature</h2>
+            <div class="search--textField">
+                <!-- Boite pin -->
+                <!-- Champ de texte -->
+                <!-- Bt rechercher -->
+            </div>
+            <div class="search--filters">
+                <!-- Texte "Filtre" -->
+                <!-- Bloc filtre 01 -->
+                <!-- Bloc filtre 02 -->
+            </div>
+            <div class="search--infoMsg">
+                <!-- Icone -->
+                <!-- Message -->
             </div>
         </div>
-        <div>
-            <div id="headerMobileMenu"class="headerMobileMenu">
-                <!--
-                <a href="#" class="headerMobileItem">Hébergements</a>
-                <a href="#" class="headerMobileItem">Activités</a>
+
+        <div class="wrapper">
+            <!-- Titre current town -->
+            <a name="Hotels"></a>
+            <section class="hotels--current">
+                <!-- 
+                <a href="#" class="myButton">BT 01</a>
+                <a href="#" class="myButton">BT 02</a>
                 -->
+                <!-- Bloc hotel 01 -->
+                <!-- Bloc hotel 02 -->
+                <!-- Bloc hotel 03 -->
+                <!-- Bloc hotel 04 -->
+            </section>
+            <!-- Bouton afficher plus -->
+            <!-- Titre most popular -->
+            <nav class="hotels--popular">
+                <!-- Bloc hotel 01 -->
+                <!-- Bloc hotel 02 -->
+                <!-- Bloc hotel 03 -->
+                <!-- Bloc hotel 04 -->
+            </nav>
+        </div>
+
+        <div>
+            <!-- Titre activities town -->
+            <div class="activities">
+                <a name="Activities"></a>
+                <!-- Bloc activité 01 -->
+                <!-- Bloc activité 02 -->
+                <!-- Bloc activité 03 -->
+                <!-- Bloc activité 04 -->
             </div>
         </div>
-    </header>
-
-    <div class="search">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <h2>En plein centre ville ou en pleine nature</h2>
-        <div class="search--textField">
-            <!-- Boite pin -->
-            <!-- Champ de texte -->
-            <!-- Bt rechercher -->
-        </div>
-        <div class="search--filters">
-            <!-- Texte "Filtre" -->
-            <!-- Bloc filtre 01 -->
-            <!-- Bloc filtre 02 -->
-        </div>
-        <div class="search--infoMsg">
-            <!-- Icone -->
-            <!-- Message -->
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <!-- Titre current town -->
-        <section class="hotels--current">
-            <!-- 
-            <a href="#" class="myButton">BT 01</a>
-            <a href="#" class="myButton">BT 02</a>
-            -->
-            <!-- Bloc hotel 01 -->
-            <!-- Bloc hotel 02 -->
-            <!-- Bloc hotel 03 -->
-            <!-- Bloc hotel 04 -->
-        </section>
-        <!-- Bouton afficher plus -->
-        <!-- Titre most popular -->
-        <nav class="hotels--popular">
-            <!-- Bloc hotel 01 -->
-            <!-- Bloc hotel 02 -->
-            <!-- Bloc hotel 03 -->
-            <!-- Bloc hotel 04 -->
-        </nav>
-    </div>
-
-    <div>
-        <!-- Titre activities town -->
-        <div class="activities">
-            <!-- Bloc activité 01 -->
-            <!-- Bloc activité 02 -->
-            <!-- Bloc activité 03 -->
-            <!-- Bloc activité 04 -->
-        </div>
-    </div>
-    <!--
-    <a href="#" class="myButton"><img src='../pin_40px.png' class="pinIcon"/></a>
-    <input type="texte" id="nameField" name="nameField" value="Entrez un nom">
-    -->
-    <script src="../js/test.js"></script>
-</body>
-
-<footer>
-    <div class="footerItem">
-        <h2>A propos</h2>
-        <a href="#">Fonctionnement du site</a>
-        <a href="#">Conditions générales de vente</a>
-        <a href="#">Données et confidentialité</a>
-    </div>
-    <div class="footerItem">
-        <h2>Nos hébergements</h2>
-        <a href="#">Charte qualité</a>
-        <a href="#">Soumettre votre hôtel</a>
-    </div>
-    <div class="footerItem">
-        <h2>Assistance</h2>
-        <a href="#">Centre d'aide</a>
-        <a href="#">Nous contacter</a>
-    </div>
-</footer>
-
+        <!--
+        <a href="#" class="myButton"><img src='../pin_40px.png' class="pinIcon"/></a>
+        <input type="texte" id="nameField" name="nameField" value="Entrez un nom">
+        -->
+        <script src="../js/test.js"></script>
+        <footer>
+            <div class="footerItem">
+                <h2>A propos</h2>
+                <a href="#">Fonctionnement du site</a>
+                <a href="#">Conditions générales de vente</a>
+                <a href="#">Données et confidentialité</a>
+            </div>
+            <div class="footerItem">
+                <h2>Nos hébergements</h2>
+                <a href="#">Charte qualité</a>
+                <a href="#">Soumettre votre hôtel</a>
+            </div>
+            <div class="footerItem">
+                <h2>Assistance</h2>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
+            </div>
+        </footer>
+    </body>
 </html>

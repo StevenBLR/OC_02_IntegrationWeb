@@ -1,11 +1,10 @@
-
-html {
+html{
 	display: flex; 
 	flex-direction: column;
 }
 
 
-body {
+body{
 	display: flex; /* Crée un contexte flex pour ses enfants */
 	flex-direction: column; /* Affichage haut --> bas */
 	min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
@@ -28,9 +27,6 @@ header{
 	flex: 1 1 auto; /* occupe la hauteur restante */
 }
 .logo{
-	position: 0;
-	left: 0;
-	bottom: 0;
 	padding: 10px;
 }
 

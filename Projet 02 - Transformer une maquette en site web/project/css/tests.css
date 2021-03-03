@@ -72,7 +72,13 @@ header{
 	flex-direction: row; /* Affichage gauche --> droite */
 	background-color: lightgray;
 }
-
+.hotelItem{
+	border-radius: 15px;
+	height: 150px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
 /* H - Les plus populaires */ 
 nav {
 	width: 30vw; /* 30% of Viewer Width */

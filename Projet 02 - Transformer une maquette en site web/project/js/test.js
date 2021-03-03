@@ -99,6 +99,65 @@ var activities = [
     }
 ];
 
+var eltHeader = document.getElementById("header");
+
+
+//#region Html presets
+var desktopHeader = '<div class="headerDesktop">\
+<div class="logoArea">\
+    <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">\
+</div>\
+<div class="headerMenuArea">\
+    <a href="#" class="headerMenuItem">Hébergements</a>\
+    <a href="#" class="headerMenuItem">Activités</a>\
+    <a href="#" class="headerMenuItem">S\'inscrire</a>\
+</div>\
+</div>';
+
+var mobileHeader = '<div class="headerDesktop">\
+<div class="logoArea">\
+    <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">\
+</div>\
+<div class="headerMenuArea">\
+    <a href="#" class="headerMenuItem">S\'inscrire</a>\
+</div>\
+</div>\
+<div>\
+<div class="headerMobileMenu">\
+    <a href="#" class="headerMobileItem">Hébergements</a>\
+    <a href="#" class="headerMobileItem">Activités</a>\
+</div>\
+</div>';
+
+//#endregion 
+
+// Modification de l'UI desktop --> Mobile
+// Variable vraie si condition >= et fausse si <
+const mediaQuery = window.matchMedia('(max-width: 800px)')
+mediaQuery.addListener(switchUI);
+
+function switchUI(){
+    if (mediaQuery.matches) { // Version Mobile
+      eltHeader.innerHTML = mobileHeader;
+
+      /* Debug
+      document.body.style.backgroundColor = "yellow";
+      console.error("Mobile");
+      */
+    } 
+    else {  // Version Bureau
+      eltHeader.innerHTML = desktopHeader;
+      /* Debug
+      console.error("Desktop");
+      document.body.style.backgroundColor = "pink";
+      */
+    }
+}
+
+
+
+
+
 // Injection des hotels
 function populateHomes(){
 

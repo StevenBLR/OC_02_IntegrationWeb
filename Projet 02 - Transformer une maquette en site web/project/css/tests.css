@@ -1,42 +1,94 @@
-/* Layout */
-/* IE Fix
+
 html {
 	display: flex; 
 	flex-direction: column;
 }
-*/
+
 
 body {
 	display: flex; /* Crée un contexte flex pour ses enfants */
 	flex-direction: column; /* Affichage haut --> bas */
 	min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
-  }
+	margin: 8px;
+}
+
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 20px;
+	font-style: normal;
+}
+
+/* Header */
+header{
+	background-color: lightpink;
+}
+.logoArea{
+	flex: 1 1 auto; /* occupe la hauteur restante */
+}
+.logo{
+	position: 0;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+}
+
+/* Desktop ----------------------------------------- */
+.headerMenuItem{
+	margin: 20px;
+}
+
+.headerDesktop{
+	display: flex;
+	flex-direction: row;
+}
+
+.headerMenuArea{
+	align-self: center; /* Positionné au centre par rapport a la hauteur du header */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	
+}
+/* Mobile ----------------------------------------- */
+
+.headerMobileMenu{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+}
+
+.headerMobileItem{
+	margin: 10px;
+}
 
 
 
-/* Hebergements */
+
+
+/* (H) Hebergements */
 .wrapper {
 	display: block; /* IE fix */
 	flex: 1 1 auto; /* occupe la hauteur restante */
+	min-height: 60vh; /* 70% de la hauteur du viewport */
 	display: flex; /* crée un contexte flex pour ses enfants */
 	flex-direction: row; /* Affichage gauche --> droite */
 	background-color: lightgray;
 }
 
+/* H - Les plus populaires */ 
 nav {
-	width: 20em;
+	width: 30vw; /* 30% of Viewer Width */
 }
 
 .content {
 	display: block; /* IE fix */
 	flex: 1; /* occupe la largeur restante */
 }
-
-header{
-	background-color: lightpink;
-}
-
+/* Search */
 .search{
+	padding: 10px;
 	background-color: lightgreen;
 }
 
@@ -52,6 +104,12 @@ header{
 	order: 2;
 	margin: 10px;
   	border: 1px solid red;
+}
+
+.activities{
+	height: 200px;
+	min-height: 50vh; /* 70% de la hauteur du viewport */
+	background-color: lightseagreen;
 }
 
 .myButton {
@@ -80,4 +138,33 @@ footer {
 	display: flex;
 	flex-direction: column;
 	margin: 15px;
+	padding: 15px;
+}
+
+/* Responsive Setup */
+@media (max-width: 800px) { /* when viewport width is smaller than value */
+	body {
+	min-height: 0; 
+	}
+
+	/* Hebergement */
+	.wrapper {
+		flex-direction: column;
+	}
+
+	nav {
+		width: auto;
+		flex: 1;
+	}
+
+	.hotels--current{
+		order: 2;
+		min-height: 100vh;
+	}
+	
+	.hotels--popular{
+		order: 1;
+		min-height: 100vh;
+	}
+	
 }

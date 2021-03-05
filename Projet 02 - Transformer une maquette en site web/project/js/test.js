@@ -1,65 +1,65 @@
 // Liste d'hebergements
-var homes = [
+var hotels = [
     {
         nom : "Auberge la Cannebière",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "marcus-loke-WQJvWU_HZFo-unsplash",
         prix : 25,
         note : 4
     },
     {
         nom : "Hôtel du port",
         ville : "Marseille",
-        imgUrl : "",
-        prix : 25,
+        imgName : "fred-kleber-gTbaxaVLvsg-unsplash",
+        prix : 52,
         note : 5
     },
     {
         nom : "Hôtel Les mouettes",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "reisetopia-B8WIgxA_PFU-unsplash",
         prix : 76,
         note : 4
     },
     {
         nom : "Hôtel de la mer",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "annie-spratt-Eg1qcIitAuA-unsplash",
         prix : 46,
         note : 3
     },
     {
         nom : "Auberge le Panier",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "nicate-lee-kT-ZyaiwBe0-unsplash",
         prix : 23,
         note : 4
     },
     {
         nom : "Hotel chez Amina",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "febrian-zakaria-M6S1WvfW68A-unsplash",
         prix : 96,
         note : 5
     },
     {
         nom : "Hotel Le solei du matin",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "emile-guillemot-Bj_rcSC5XfE-unsplash",
         prix : 128,
         note : 5
     },
     {
         nom : "Au coeur de l'eau Chambres d'hôtes",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "aw-creative-VGs8z60yT2c-unsplash",
         prix : 71,
         note : 4
     },
     {
         nom : "Hotel Tout bleu et Blanc",
         ville : "Marseille",
-        imgUrl : "",
+        imgName : "febrian-zakaria-sjvU0THccQA-unsplash",
         prix : 68,
         note : 4
     }
@@ -99,61 +99,81 @@ var activities = [
     }
 ];
 
-var eltHeader = document.getElementById("header");
+const imgPath = "../imgs/hebergements/3_medium/"
+const blue = "#0065FC";
+const gray = "#D2D2D2";
+const lightBlue = "#DEEBFF";
+const lightGray = "#F2F2F2";
 
-//#region Html presets
-var desktopHeader = '<div class="headerDesktop">\
-<div class="logoArea">\
-    <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">\
-</div>\
-<div class="headerMenuArea">\
-    <a href="#Hotels" class="headerMenuItem">Hébergements</a>\
-    <a href="#Activities" class="headerMenuItem">Activités</a>\
-    <a href="#" class="headerMenuItem">S\'inscrire</a>\
-</div>\
-</div>';
+var hotelCurrentElt = document.getElementById("hotels--current");
+hotelCurrentElt.innerHTML = "";
 
-var mobileHeader = '<div class="headerDesktop">\
-<div class="logoArea">\
-    <img class="logo" src="../imgs/logo/Reservia.svg" alt="logo reservia">\
-</div>\
-<div class="headerMenuArea">\
-    <a href="#" class="headerMenuItem">S\'inscrire</a>\
-</div>\
-</div>\
-<div class="headerMobileMenu">\
-    <a href="#Hotels" class="headerMobileItem">Hébergements</a>\
-    <a href="#Activities" class="headerMobileItem">Activités</a>\
-</div>';
+populateHotels();
 
-//#endregion 
-
-// Modification de l'UI desktop --> Mobile
-// Variable vraie si condition >= et fausse si <
-const mediaQuery = window.matchMedia('(max-width: 800px)')
-mediaQuery.addListener(switchHeader);
-
-function switchHeader(){
-    if (mediaQuery.matches) eltHeader.innerHTML = mobileHeader; // Version Mobile
-    else eltHeader.innerHTML = desktopHeader; // Version Bureau
-}
-
-
-
-
-
-// Injection des hotels
-function populateHomes(){
-
+// Injection des hotels dans l'UI
+function populateHotels()
+{
+    for (var i=0; i<6; i++) hotelCurrentElt.appendChild(newHotelCard(hotels[i]));
 }
 
 // Injection des hotels les plus populaires
-function populateMostPopular(){
+function populateMostPopular()
+{
 
 }
 
 // Injection des activités
-function populateActivities(){
+function populateActivities()
+{
+
+}
+
+function newHotelCard(hotelInfos)
+{
+    // Main container
+    var hotelItemElt = document.createElement("div");
+    hotelItemElt.id = "hotelItem";
+    hotelItemElt.className = "hotelItem";
+
+    // Image
+    var hotelImageElt = document.createElement("img");
+    hotelImageElt.className = "hotelItem--img";
+    hotelImageElt.setAttribute("alt", hotelInfos.nom);
+    hotelImageElt.setAttribute("src", imgPath + hotelInfos.imgName + ".jpg");
+
+    // Info section container
+    var infoSectionElt = document.createElement("div");
+    infoSectionElt.className = "hotelItem--infoSection";
+
+    // Texts
+    var titleElt = document.createElement("h3");
+    titleElt.textContent = hotelInfos.nom;
+    var infoElt = document.createElement("p");
+    infoElt.innerHTML = "Nuit à partir de <strong>" + hotelInfos.prix + "€</strong>";
+
+    // Stars container
+    var starContainerElt = document.createElement("div");
+    starContainerElt.className = "ratingStars";
+
+    // Stars
+    for (var i=0; i<5; i++)
+    {
+        var starElt = document.createElement("i");
+        starElt.className = "fas fa-star fa-xs";
+        if (i < hotelInfos.note) starElt.style.color = blue;
+        else starElt.style.color = gray;
+        starContainerElt.appendChild(starElt);
+    }
+
+    // Affecting Parents
+    hotelItemElt.appendChild(hotelImageElt);
+    hotelItemElt.appendChild(infoSectionElt);
+    infoSectionElt.appendChild(titleElt);
+    infoSectionElt.appendChild(infoElt);
+    infoSectionElt.appendChild(starContainerElt);
+
+    // Returning root Parent
+    return hotelItemElt;
 
 }
 

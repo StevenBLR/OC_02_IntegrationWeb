@@ -1,8 +1,15 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
 html{
 	display: flex; 
 	flex-direction: column;
 }
 
+*{
+	font-family: 'Raleway', sans-serif;
+}
 
 body{
 	display: flex; /* Crée un contexte flex pour ses enfants */
@@ -12,11 +19,22 @@ body{
 }
 
 h1{
-	font-size: 30px;
+	font-size: 25px;
+	font-weight: 1000;
 }
 h2{
-	font-size: 20px;
-	font-style: normal;
+	font-size: 18px;
+	font-weight: 500;
+}
+h3{
+	font-size: 15px;
+	font-family: Raleway-light;
+	font-family: 'Raleway:wght@300', sans-serif;
+}
+
+p{
+	font-style:normal;
+	font-size: 13px;
 }
 
 /* Header */
@@ -47,37 +65,65 @@ header{
 	justify-content: flex-end;
 	
 }
-/* Mobile ----------------------------------------- */
-
-.headerMobileMenu{
-	display: flex;
-	flex-direction: row;
-	justify-content:space-evenly;
-}
-
-.headerMobileItem{
-	margin: 10px;
-}
-
-
-
-
 
 /* (H) Hebergements */
 .wrapper {
-	display: block; /* IE fix */
-	flex: 1 1 auto; /* occupe la hauteur restante */
+	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
 	min-height: 60vh; /* 70% de la hauteur du viewport */
 	display: flex; /* crée un contexte flex pour ses enfants */
 	flex-direction: row; /* Affichage gauche --> droite */
 	background-color: lightgray;
 }
 .hotelItem{
+	display: flex;
+	flex-direction: column;
 	border-radius: 15px;
-	height: 150px;
-	border: 0;
-	display: inline-block;
-	position: relative;
+	box-shadow: 3px 3px 11px -3px gray;
+	margin : 10px;
+	border: 5px solid white;
+	height: 180px;
+	width: 230px;
+}
+
+.hotelItem--infoSection{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	overflow: hidden; /* Cache les parties qui dépasse */ 
+	background-color: white;
+}
+
+
+.hotelItem--infoSection h3{ /* Titres inclus dans infoSection */ 
+	margin : 10px 0px 2px 5px;
+	line-height: 1.2;
+}
+
+.hotelItem--infoSection p{ /* Paragraphes inclus dans infoSection */ 
+	margin : 0px 0px 5px 5px;
+	line-height: 1.3;
+}
+
+.hotelItem--infoSection div{ /* Conteneurs inclus dans infoSection */ 
+	margin-left: 5px;
+}
+
+.ratingStars {
+	display: flex;
+	justify-self: flex-start;
+}
+
+.hotelItem--img{
+	border-radius: 12px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	object-fit: cover;
+	width: 100%;
+	height: 60%;
+	
 }
 /* H - Les plus populaires */ 
 nav {
@@ -95,9 +141,13 @@ nav {
 }
 
 .hotels--current{
+	display: flex; 
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content:space-evenly;
 	order: 1;
-	display: block; /* IE fix */
-	flex: 1; /* occupe la largeur restante */
+	flex: 1 1; /* occupe la largeur restante */
 	margin: 10px;
 	border: 1px solid blue;
 }
@@ -143,8 +193,9 @@ footer {
 	padding: 15px;
 }
 
+
 /* Responsive Setup */
-@media (max-width: 800px) { /* when viewport width is smaller than value */
+@media (max-width: 800px) { /* [1230] when viewport width is smaller than value */
 	body {
 	min-height: 0; 
 	}
@@ -168,5 +219,19 @@ footer {
 		order: 1;
 		min-height: 100vh;
 	}
-	
+	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
+	.headerDesktop .signup{ /* espace = Parent --> enfant */
+		position: absolute;
+		right: 0;
+		top : 0;
+	}
+
+	.headerDesktop{
+		flex-direction: column;
+	}
+
+	.headerMenuArea{
+		flex: auto;
+		width: auto;
+	}
 }

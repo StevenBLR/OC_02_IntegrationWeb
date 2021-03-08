@@ -1,5 +1,6 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif; */
 
 /* General Settings -------------------------------- */
 *{
@@ -36,12 +37,12 @@ header{
 	background-color: lightpink;
 }
 
-.logoArea{
-	flex: 1 1 auto; /* occupe la hauteur restante */
-}
-.logo{
-	padding: 10px;
-}
+	.logoArea{
+		flex: 1 1 auto; /* occupe la hauteur restante */
+	}
+	.logo{
+		padding: 10px;
+	}
 
 .headerMenuItem{
 	margin: 20px;
@@ -59,10 +60,10 @@ header{
 	justify-content: flex-end;
 }
 
-/* Search -------------------------------------------- */
+/* Search Section -------------------------------------- */
 .search{
 	padding: 10px;
-	background-color: lightgreen;
+	/*background-color: lightgreen;*/
 }
 	.search--bar{
 		display: flex;
@@ -70,7 +71,6 @@ header{
 		height: 45px;
 		margin-top: 10px;
 	}
-
 		.search--pinBox{
 			display: flex;
 			justify-content: center;
@@ -81,13 +81,15 @@ header{
 			background-color: #F2F2F2;
 			
 		}
-
 		.search--textField{
+			padding-left: 15px;
 			border: none;
 			height: 95%;
 			min-width: 250px;
+			font-weight: 600;
+			font-size: 15px;
+			color: black;
 		}
-
 		.search--sendBt{
 			height: 100%;
 			border: none;
@@ -97,7 +99,68 @@ header{
 			background-color: #0065FC;
 			color: white;
 		}
+		
+		::placeholder {
+			font-weight: 600;
+			font-size: 15px;
+			color: grey;
+		}
 
+
+	.search--filters{
+		display: flex;
+		align-items: center;
+		height: 35px;
+		margin-top: 20px;
+		/*background-color: lightsalmon;*/
+	}
+		.search--filters h1{
+			font-size: 18px;
+			height: 100%;
+			width: 100px;
+		}
+
+		.search--filterBt{
+			display: flex;
+			flex-direction: row;
+			margin-left: 10px;
+			margin-right: 10px;
+			height : 100%;
+			width: auto;
+		}
+
+		.filterIcon{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 40px;
+			height : 100%;
+			min-width: 35px;
+			background-color:#DEEBFF;
+			z-index: 1;
+		}
+
+		.filterIcon i{
+			color: #0065FC;
+		}
+
+		.filterLabel{
+			width: 100%;
+			height: 95%;
+			border: 1px solid;
+			border-color: #c7c7c7;
+			border-radius: 0px 35px 35px 0px;
+			margin-left: -15px;
+			padding-right: 20px;
+			background-color:white;
+		}
+
+		.filterLabel p{
+			font-weight: bold;
+			margin : 8px 0px 0px 25px;
+			font-size: 15px;
+		}
+		
 /* (H) Hebergements ----------------------------------- */
 .wrapper {
 	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
@@ -250,8 +313,8 @@ footer {
 	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
 	.headerDesktop .signup{ /* espace = Parent --> enfant */
 		position: absolute;
-		right: 0;
-		top : 0;
+		right: 15px;
+		top : 20px;
 	}
 
 	.headerDesktop{

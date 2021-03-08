@@ -105,7 +105,7 @@ const gray = "#D2D2D2";
 const lightBlue = "#DEEBFF";
 const lightGray = "#F2F2F2";
 
-var hotelCurrentElt = document.getElementById("hotels--current");
+var hotelCurrentElt = document.getElementById("hotels--current--cards");
 hotelCurrentElt.innerHTML = "";
 
 populateHotels();

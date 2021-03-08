@@ -34,7 +34,7 @@ p{
 
 /* Header -------------------------------------------- */
 header{
-	background-color: lightpink;
+	/*background-color: lightpink;*/
 }
 
 	.logoArea{
@@ -83,8 +83,9 @@ header{
 		}
 		.search--textField{
 			padding-left: 15px;
-			border: none;
-			height: 95%;
+			border: 1px solid;
+			border-color: #F2F2F2;
+			height: 92%;
 			min-width: 250px;
 			font-weight: 600;
 			font-size: 15px;
@@ -110,14 +111,13 @@ header{
 	.search--filters{
 		display: flex;
 		align-items: center;
-		height: 35px;
+		height: 40px;
 		margin-top: 20px;
 		/*background-color: lightsalmon;*/
 	}
 		.search--filters h1{
-			font-size: 18px;
-			height: 100%;
-			width: 100px;
+			font-size: 16px;
+			margin-right: 10px;
 		}
 
 		.search--filterBt{
@@ -135,39 +135,64 @@ header{
 			align-items: center;
 			border-radius: 40px;
 			height : 100%;
-			min-width: 35px;
+			min-width: 40px;
 			background-color:#DEEBFF;
 			z-index: 1;
 		}
 
-		.filterIcon i{
-			color: #0065FC;
-		}
+			.filterIcon i{
+				color: #0065FC;
+			}
 
 		.filterLabel{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: 100%;
 			height: 95%;
 			border: 1px solid;
 			border-color: #c7c7c7;
 			border-radius: 0px 35px 35px 0px;
-			margin-left: -15px;
-			padding-right: 20px;
+			margin-left: -25px;
+			padding-right: 15px;
 			background-color:white;
 		}
 
-		.filterLabel p{
-			font-weight: bold;
-			margin : 8px 0px 0px 25px;
-			font-size: 15px;
-		}
+			.filterLabel p{
+				font-weight: bold;
+				margin-left: 30px;
+				font-size: 15px;
+			}
 		
+	.search--infoMsg{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 15px;
+	}
+
+		.infoIcon{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			border : 1px solid;
+			border-radius: 20px;
+			margin-right: 10px;
+			min-width: 20px;
+			min-height: 20px;
+		}
+
+			.infoIcon i{
+				margin-top: 4px;
+				color: #0065FC;
+			}
 /* (H) Hebergements ----------------------------------- */
 .wrapper {
 	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
-	min-height: 60vh; /* 70% de la hauteur du viewport */
+	min-height: 60vh; /* 60% de la hauteur du viewport */
 	display: flex; /* crée un contexte flex pour ses enfants */
 	flex-direction: row; /* Affichage gauche --> droite */
-	background-color: lightgray;
+	/*background-color: lightgray;*/
 }
 .hotelItem{
 	display: flex;
@@ -240,18 +265,22 @@ nav {
 	order: 1;
 	flex: 1 1; /* occupe la largeur restante */
 	margin: 10px;
+	border-radius: 20px;
+	background-color:#F2F2F2;
 	border: 1px solid blue;
 }
 
 .hotels--popular{
 	order: 2;
 	margin: 10px;
+	border-radius: 20px;
+	background-color:#F2F2F2;
   	border: 1px solid red;
 }
 
 .activities{
 	height: 200px;
-	min-height: 50vh; /* 70% de la hauteur du viewport */
+	min-height: 50vh; /* 50% de la hauteur du viewport */
 	background-color: lightseagreen;
 }
 

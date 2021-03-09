@@ -106,9 +106,12 @@ const lightBlue = "#DEEBFF";
 const lightGray = "#F2F2F2";
 
 var hotelCurrentElt = document.getElementById("hotels--current--cards");
+var hotelMostPopElt = document.querySelector("#hotels--popular .hotels--current--cards");
 hotelCurrentElt.innerHTML = "";
+hotelMostPopElt.innerHTML = "";
 
 populateHotels();
+populateMostPopular();
 
 // Injection des hotels dans l'UI
 function populateHotels()
@@ -119,7 +122,7 @@ function populateHotels()
 // Injection des hotels les plus populaires
 function populateMostPopular()
 {
-
+    for (var i=5; i<8;i++) hotelMostPopElt.appendChild(newHotelCard(hotels[i]));
 }
 
 // Injection des activités

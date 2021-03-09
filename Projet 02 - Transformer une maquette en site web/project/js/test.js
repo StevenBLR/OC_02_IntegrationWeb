@@ -122,7 +122,7 @@ function populateHotels()
 // Injection des hotels les plus populaires
 function populateMostPopular()
 {
-    for (var i=5; i<8;i++) hotelMostPopElt.appendChild(newHotelCard(hotels[i]));
+    for (var i=6; i<9;i++) hotelMostPopElt.appendChild(newHotelCard(hotels[i]));
 }
 
 // Injection des activités

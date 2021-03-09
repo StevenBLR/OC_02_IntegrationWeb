@@ -186,9 +186,10 @@ header{
 /* (H) Hebergements ----------------------------------- */
 .wrapper {
 	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
-	min-height: 60vh; /* 60% de la hauteur du viewport */
+	min-height: 40vh; /* 40% de la hauteur du viewport */
 	display: flex; /* crée un contexte flex pour ses enfants */
 	flex-direction: row; /* Affichage gauche --> droite */
+	margin-bottom: 20px;
 	/*background-color: lightgray;*/
 }
 	.hotels--current{
@@ -294,7 +295,7 @@ header{
 			.hotels--popular .hotelItem{
 				display: flex;
 				flex-direction: row;
-				width: 90%;
+				width: 80%;
 				margin-top: 10px;
 				margin-bottom: 10px;
 				height: 120px;
@@ -320,24 +321,56 @@ header{
 
 
 .activities{
+	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
+	display: flex; /* crée un contexte flex pour ses enfants */
+	flex-direction: column; /* Affichage gauche --> droite */
 	height: 200px;
 	min-height: 50vh; /* 50% de la hauteur du viewport */
-	background-color: lightseagreen;
+	margin-bottom: 20px;
+	/*background-color: lightseagreen;*/
 }
+	.activities h1{
+		font-size: 18px;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.activities--cards{
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+	}
+		.oneActivity{
+			width: 25%;
+			margin-bottom: 20px;
+			margin-right: 20px;
+			background-color: chartreuse;
+		}
+			.oneActivity img{
+				object-fit: cover;
+				border-radius: 12px;
+				background-color: crimson;
+			}
 
-.myButton {
-	background-color:#44c767;
-	border-radius:12px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:75px 100px;
-	text-decoration:none;
-	clip-path: url(../imgs/testImg.jpg);
-}
+		.twoActivities{
+			display: flex;
+			flex-direction: column;
+			width: 25%;
+			margin-bottom: 20px;
+			margin-right: 20px;
+		}
+
+			.oneActivity .activityImg{
+				object-fit: cover;
+				height: 50%;
+				width: 100%;
+			}
+			
+			.twoActivities .activityImg{
+				object-fit: cover;
+				height: 50%;
+				width: 100%;
+			}
 
 /* Footer */
 footer {
@@ -353,6 +386,11 @@ footer {
 	margin: 15px;
 	padding: 15px;
 }
+
+	.footerItem h2{
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
 
 
 /* Responsive Setup */

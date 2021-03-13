@@ -37,6 +37,10 @@ p{
 	margin: 30px;
 }
 
+.activities .sectionTitle{
+	margin-left: 0px;
+}
+
 /* Header -------------------------------------------- */
 header{
 	/*background-color: lightpink;*/
@@ -51,7 +55,20 @@ header{
 
 .headerMenuItem{
 	margin: 20px;
+	color: #797979;
+	text-decoration: none;
 }
+
+.signup{
+	color: #0065FC;
+	font-weight: bold;
+	
+}
+
+.headerMenuItem:hover {
+	color: #0065FC;
+  }
+
 
 .headerDesktop{
 	display: flex;
@@ -98,7 +115,7 @@ header{
 			border-color: #F2F2F2;
 			height: 92%;
 			min-width: 250px;
-			font-weight: 400;
+			font-weight: 700;
 			font-size: 15px;
 			color: black;
 		}
@@ -326,8 +343,11 @@ header{
 				.hotels--popular .ratingStars{
 					margin-top: 15px;
 				}
-
-
+	.showMore{
+		font-weight: 700;
+		margin-top: 5px;
+		margin: 30px;
+	}
 
 .activities{
 	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
@@ -335,7 +355,7 @@ header{
 	flex-direction: column; /* Affichage gauche --> droite */
 	height: 200px;
 	min-height: 50vh; /* 50% de la hauteur du viewport */
-	margin-bottom: 100px;
+	margin-bottom: 130px;
 	box-sizing: border-box;
 	/*background-color: lightseagreen;*/
 }
@@ -458,6 +478,10 @@ footer {
 		background-color:unset;
 	}
 
+	.hotels--current--cards{
+		margin:0;
+	}
+
 	.hotels--popular{
 		order: 1;
 		height: fit-content;
@@ -474,8 +498,9 @@ footer {
 		margin: 0;
 		font-size: 30px;
 		margin-left: 20px;
-		margin-top: 40px;
-
+		
+	}
+	
 	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
 	.headerDesktop .signup{ /* espace = Parent --> enfant */
 		position: absolute;
@@ -501,11 +526,12 @@ footer {
 		height: fit-content;
 	}
 
-		.activity{
+		.activity {
 			width: 100%;
-			height : 20vh;
-			margin-left: 15px;
-			margin-right: 15px;
+			height: 20vh;
+			margin: 10px;
+			margin-left: 10px;
+			margin-right: 0px;
 			margin-bottom: 40px;
 		}
 
@@ -527,6 +553,9 @@ footer {
 	.activities{
 		margin-right: 15px;
 	}
-	
-
+	/*
+	.activities--cards{
+		display: contents;
+	}
+	*/
 }

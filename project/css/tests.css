@@ -45,15 +45,24 @@ a{
 	text-decoration: none;
 }
 
-/* Header -------------------------------------------- */
-header{
-	/*background-color: lightpink;*/
+.animatedHighlight{
+	/* Anim settigs */
+	transform:scale(1);
+	transition: cubic-bezier(.14,.43,.19,.97);
+	transition-property: transform;
+	transition-duration: 400ms;
 }
 
-	.headerDesktop{
-		display: flex;
-		flex-direction: row;
-	}
+.animatedHighlight:hover{
+	transform: scale(1.05);
+}
+
+/* Header -------------------------------------------- */
+
+.headerDesktop{
+	display: flex;
+	flex-direction: row;
+}
 	.logoArea{
 		flex: 1 1 auto; /* occupe la hauteur restante */
 	}
@@ -170,9 +179,10 @@ header{
 		margin-top: 20px;
 		/*background-color: lightsalmon;*/
 	}
-		.search--filters h1{
-			font-size: 16px;
-			margin-right: 10px;
+		.search--filters h2{
+			font-size: 18px;
+			font-weight: 700;
+			margin: 5px 10px 0px 0px;
 		}
 
 		.search--filterBt{
@@ -180,8 +190,15 @@ header{
 			flex-direction: row;
 			align-items: center;
 			margin : 5px;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 
+		.search--filterBt:hover{
+			/* Anim settigs */
+			transform: scale(1.15);
+			color: #0065FC;
+		}
 			.filterIcon{
 				display: flex;
 				justify-content: center;
@@ -271,6 +288,7 @@ header{
 		}
 			.hotelItem{
 				display: flex;
+				color: black;
 				flex-direction: column;
 				border-radius: 15px;
 				box-shadow: 3px 3px 11px -3px gray;
@@ -457,6 +475,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin:-10px;
 	background: #F2F2F2;
 }
 
@@ -469,9 +488,17 @@ footer {
 
 	.footerItem h2{
 		font-weight: bold;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
+	.footerItem a{
+		margin-bottom: 10px;
+		color: black;
+	}
+
+	.footerItem a:hover{
+
+	}
 
 /* Responsive Setup */
 @media (max-width: 1015px) { /* [1230] when viewport width is smaller than value */
@@ -517,7 +544,7 @@ footer {
 
 	.sectionTitle{
 		margin: 0;
-		font-size: 30px;
+		font-size: 24px;
 		margin-left: 20px;
 		
 	}
@@ -529,9 +556,14 @@ footer {
 		top : 10px;
 	}
 
-	.headerMenuItem:not(.signup){
+	.headerMenuItem:not(.signup){	/* tous les elements du menu sauf signup */
 		align-items: center;
 		width: 100%;
+		margin : -20px -20px 20px -20px;
+		/*
+		margin-left : -20px;
+		margin-right : -20px;
+		*/
 	}
 
 	.signup a{
@@ -567,6 +599,10 @@ footer {
 	.activities{
 		height: fit-content;
 	}
+
+		.activities .sectionTitle {
+			margin-left: px;
+		}
 
 		.activity {
 			width: 100%;

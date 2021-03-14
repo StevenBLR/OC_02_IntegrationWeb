@@ -134,9 +134,10 @@ function populateActivities()
 function newHotelCard(hotelInfos)
 {
     // Main container
-    var hotelItemElt = document.createElement("div");
+    var hotelItemElt = document.createElement("a");
     hotelItemElt.id = "hotelItem";
-    hotelItemElt.className = "hotelItem";
+    hotelItemElt.className = "hotelItem animatedHighlight";
+    hotelItemElt.href ="#";
 
     // Image
     var hotelImageElt = document.createElement("img");

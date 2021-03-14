@@ -54,7 +54,7 @@ a{
 }
 
 .animatedHighlight:hover{
-	transform: scale(1.05);
+	transform: scale(1.025);
 }
 
 /* Header -------------------------------------------- */
@@ -249,6 +249,7 @@ a{
 			box-sizing: border-box;
 			border-radius: 20px;
 			margin-right: 10px;
+			margin-bottom: 10px;
 			min-width: 20px;
 			min-height: 20px;
 		}
@@ -382,6 +383,7 @@ a{
 					margin-top: 15px;
 				}
 	.showMore{
+		color: black;
 		font-weight: 700;
 		margin-top: 5px;
 		margin: 30px;
@@ -413,6 +415,7 @@ a{
 			width: 24%;
 			height: 100%;
 			box-sizing: border-box;
+			color: black;
 			/*background-color: chartreuse;*/
 		}
 

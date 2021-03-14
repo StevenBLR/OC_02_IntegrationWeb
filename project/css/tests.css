@@ -41,46 +41,66 @@ p{
 	margin-left: 0px;
 }
 
+a{
+	text-decoration: none;
+}
+
 /* Header -------------------------------------------- */
 header{
 	/*background-color: lightpink;*/
 }
 
+	.headerDesktop{
+		display: flex;
+		flex-direction: row;
+	}
 	.logoArea{
 		flex: 1 1 auto; /* occupe la hauteur restante */
 	}
-	.logo{
-		padding: 10px;
+		.logo{
+			padding: 10px;
+		}
+
+	.headerMenuArea{
+		align-self: center; /* Positionné au centre par rapport a la hauteur du header */
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
 	}
 
-.headerMenuItem{
-	margin: 20px;
-	color: #797979;
-	text-decoration: none;
-}
+		.headerMenuItem{
+			display: flex;
+			flex-direction: column;
+		}
 
-.signup{
-	color: #0065FC;
-	font-weight: bold;
+		.headerMenuItem a{
+			margin: 20px;
+			margin-top: 20px;
+			padding-top: 20px;
+			color: #797979;
+			text-decoration: none;
+		}
+
+		.headerMenuItem a:hover {
+			color: #0065FC;
+		}
+
+			.signup a{
+				color: #0065FC;
+				font-weight: bold;
+			}
+				.blueBar{
+					width: 100%;
+					height: 2px;
+					margin-top: -20px;
+					order: 0;
+					box-shadow: 3px 3px 11px -3px gray;
+					background-color: #0065FC;
+				}
+
 	
-}
 
-.headerMenuItem:hover {
-	color: #0065FC;
-  }
-
-
-.headerDesktop{
-	display: flex;
-	flex-direction: row;
-}
-
-.headerMenuArea{
-	align-self: center; /* Positionné au centre par rapport a la hauteur du header */
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
+	
 
 /* Search Section -------------------------------------- */
 .search{
@@ -502,10 +522,24 @@ footer {
 	}
 	
 	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
-	.headerDesktop .signup{ /* espace = Parent --> enfant */
+	.headerDesktop .signup { /* espace = Parent --> enfant */
 		position: absolute;
 		right: 15px;
-		top : 20px;
+		top : 10px;
+	}
+
+	.signup a{
+		padding-top: 11px;
+	}
+	.signup .blueBar{
+		order: 1;
+		width: 0px;
+		margin-top: 0px;
+	}
+
+	.blueBar{
+		order: 1;
+		margin-top: 0px;
 	}
 
 	.headerDesktop{
@@ -516,6 +550,7 @@ footer {
 		flex: auto;
 		width: auto;
 	}
+	
 	
 	.hotelItem{
 		width: 100%;

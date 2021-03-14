@@ -494,6 +494,7 @@ footer {
 		order: 2;
 		min-height: 100vh;
 		margin-right: 0;
+		margin-top: 40px;
 		width: 100%;
 		background-color:unset;
 	}
@@ -528,6 +529,11 @@ footer {
 		top : 10px;
 	}
 
+	.headerMenuItem:not(.signup){
+		align-items: center;
+		width: 100%;
+	}
+
 	.signup a{
 		padding-top: 11px;
 	}
@@ -548,7 +554,8 @@ footer {
 
 	.headerMenuArea{
 		flex: auto;
-		width: auto;
+		width: 100%;
+		margin-bottom: 15px;
 	}
 	
 	

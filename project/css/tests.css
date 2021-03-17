@@ -89,21 +89,18 @@ a{
 			flex-direction: column;
 		}
 
-		.headerMenuItem::before{
+		.headerMenuItem:not(.signup)::before{
 			content: "";
 			display: block;
-			width: 100%;
+			position: relative;
+    		bottom: 19px;
+			width: 95%;
 			height: 2px;
-			margin-top: -20px;
-			order: 0;
-			box-shadow: 3px 3px 11px -3px gray;
 			background-color: #0065FC;
 		}
 
 		.headerMenuItem a{
 			margin: 20px;
-			margin-top: 20px;
-			padding-top: 20px;
 			color: #797979;
 			text-decoration: none;
 		}
@@ -112,8 +109,8 @@ a{
 			color: #0065FC;
 		}
 
-		.headerMenuItem a:hover {
-			color: #0065FC;
+		.headerMenuItem a:hover .headerMenuItem::before{
+			background-color: pink;
 		}
 
 			.signup a{
@@ -174,6 +171,10 @@ a{
 			background-color: #0065FC;
 			color: white;
 		}
+			.search--sendBt i{
+				display: none; /* Cacher un element*/
+			}
+
 		::placeholder {
 			font-weight: 400;
 			font-size: 15px;
@@ -298,7 +299,6 @@ a{
 			align-items: center;
 			justify-content:space-evenly;
 			margin: 10px;
-			/*border: 1px solid blue;*/
 		}
 			.hotelItem{
 				display: flex;
@@ -577,24 +577,23 @@ footer {
 		align-items: center;
 		width: 100%;
 		margin : -20px -20px 20px -20px;
-		/*
-		margin-left : -20px;
-		margin-right : -20px;
-		*/
+	}
+
+	.headerMenuItem:not(.signup)::before{
+		display: none;
+	}
+
+	.headerMenuItem:not(.signup)::after{
+		display: block;
+		content: "";
+		width: 95%;
+		height: 2px;
+		box-shadow: 3px 3px 11px -3px gray;
+		background-color: #0065FC;
 	}
 
 	.signup a{
-		padding-top: 11px;
-	}
-	.signup .blueBar{
-		order: 1;
-		width: 0px;
-		margin-top: 0px;
-	}
-
-	.blueBar{
-		order: 1;
-		margin-top: 0px;
+		padding-top: 9px;
 	}
 
 	.headerDesktop{
@@ -604,6 +603,7 @@ footer {
 	.headerMenuArea{
 		flex: auto;
 		width: 100%;
+		margin-top: 15px;
 		margin-bottom: 15px;
 	}
 	
@@ -643,6 +643,14 @@ footer {
 	}
 	.search--sendBt{
 		width: 50px;
+	}
+
+	.search--sendBt span{
+		display: none;	/* Cacher un element */
+	}
+
+	.search--sendBt i{
+		display: block; /* Afficher un element en mode block */
 	}
 
 	.activities{

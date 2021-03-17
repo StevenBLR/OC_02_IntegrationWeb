@@ -109,7 +109,7 @@ a{
 			color: #0065FC;
 		}
 
-		.headerMenuItem a:hover .headerMenuItem::before{
+		.headerMenuItem a:hover:before{
 			background-color: pink;
 		}
 
@@ -174,6 +174,11 @@ a{
 			.search--sendBt i{
 				display: none; /* Cacher un element*/
 			}
+
+			.search--sendBt span{
+				font-weight: 700;
+			}
+
 
 		::placeholder {
 			font-weight: 400;

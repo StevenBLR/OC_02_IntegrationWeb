@@ -413,18 +413,21 @@ a{
 
 	.activities--cards {
 		display: grid;
+		width: 100%;
+		height: 500px;
 		justify-items: stretch;
 		align-items: stretch;
-		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(10, 1fr);
-		grid-column-gap: 10px;
+		grid-column-gap: 25px;
 		grid-row-gap: 25px;
 	}
 	.activities--cards a{
 		margin: 20px;
 		box-sizing: border-box;
 	}	
-	
+	.activities--cards div{
+		background-color: burlywood;
+	}
 	.activity{
 		display: flex;
 		flex-direction: column;
@@ -466,7 +469,7 @@ footer {
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin:-10px;
+	margin-top: 20px;
 	background: #F2F2F2;
 }
 
@@ -485,10 +488,6 @@ footer {
 	.footerItem a{
 		margin-bottom: 10px;
 		color: black;
-	}
-
-	.footerItem a:hover{
-
 	}
 
 /* Responsive Setup */
@@ -587,22 +586,35 @@ footer {
 		/*height: 5%;*/
 	}
 
-	.activities{
+	.activities--cards {
+		display: grid;
 		height: fit-content;
+		margin-top: 10px;
+		justify-items: stretch;
+		align-items: stretch;
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		grid-column-gap: 25px;
+		grid-row-gap: 25px;
 	}
-
-		.activities .sectionTitle {
-			margin-left: px;
-		}
-
-		.activity {
+		.activities--cards div{
+			height: 200px;
 			width: 100%;
-			height: 20vh;
-			margin: 10px;
-			margin-left: 10px;
-			margin-right: 0px;
-			margin-bottom: 40px;
+			grid-area:auto;
 		}
+
+		.activities{
+			height: fit-content;
+		}
+		
+			.activity {
+				width: 100%;
+				height: 20vh;
+				margin: 10px;
+				margin-left: 10px;
+				margin-right: 0px;
+				margin-bottom: 40px;
+			}
 
 	.search--textField{
 		flex : 1 1 auto;
@@ -627,14 +639,9 @@ footer {
 		display: block; /* Afficher un element en mode block */
 	}
 
-	.activities{
-		margin-right: 15px;
+	.footerItem {
+		width: 100%;
 	}
-	/*
-	.activities--cards{
-		display: contents;
-	}
-	*/
 }
 
 @media (min-width: 1275px) {

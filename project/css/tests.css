@@ -517,7 +517,7 @@ footer {
 	}
 
 	.hotels--current--cards{
-		margin:0;
+		margin-bottom: 10px;
 	}
 
 	.hotels--popular{
@@ -620,7 +620,7 @@ footer {
 		flex : 1 1 auto;
 		height: 100%;
 		width: 100%;
-		min-width: none;
+		min-width: 0px;
 		box-sizing: border-box;
 	}
 

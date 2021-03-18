@@ -502,6 +502,15 @@ footer {
 		box-sizing: border-box;
 	}
 
+	header{
+		position: fixed;
+		top: 0px;
+		height: 125px;
+		background-color: white;
+		width: 100%;
+		z-index: 1;
+	}
+
 	nav {
 		width: auto;
 		flex: 1;
@@ -566,7 +575,7 @@ footer {
 	}
 
 	.signup a{
-		padding-top: 9px;
+		/*padding-top: 9px;*/
 	}
 
 	.headerDesktop{
@@ -616,6 +625,10 @@ footer {
 				margin-bottom: 40px;
 			}
 
+	.search{
+		margin-top: 150px;
+	}
+	
 	.search--textField{
 		flex : 1 1 auto;
 		height: 100%;

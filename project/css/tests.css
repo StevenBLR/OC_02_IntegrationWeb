@@ -108,9 +108,12 @@ a{
 		.headerMenuItem a:hover {
 			color: #0065FC;
 		}
-
-		.headerMenuItem a:hover:before{
+	
+/* TODO : Apply animation on eleemnt on other element hover */
+		.headerMenuItem a:hover .headerMenuItem:not(.signup)::before{
 			background-color: pink;
+			color : pink;
+			display: none;
 		}
 
 			.signup a{
@@ -204,6 +207,10 @@ a{
 			font-size: 18px;
 			font-weight: 700;
 			margin: 5px 10px 0px 0px;
+		}
+		
+		.search--filters a{
+			color: black;
 		}
 
 		.search--filterBt{
@@ -407,10 +414,6 @@ a{
 		margin: 30px;
 	}
 
-.activity{
-	height: auto;
-}
-
 	.activities--cards {
 		display: grid;
 		width: 100%;
@@ -421,18 +424,13 @@ a{
 		grid-column-gap: 25px;
 		grid-row-gap: 25px;
 	}
+	/*
 	.activities--cards a{
 		margin: 20px;
 		box-sizing: border-box;
 	}	
-	.activities--cards div{
-		background-color: burlywood;
-	}
-	.activity{
-		display: flex;
-		flex-direction: column;
-	}
-
+	*/
+	
 	.div1 { grid-area: 1 / 1 / 11 / 2;}
 	.div2 { grid-area: 7 / 2 / 11 / 3;}
 	.div3 { grid-area: 1 / 2 / 7 / 3;}
@@ -441,21 +439,61 @@ a{
 	.div6 { grid-area: 5 / 4 / 11 / 5;}
 	.div7 { grid-area: 1 / 5 / 11 / 6;}
 
+	.activity{
+		background-color: burlywood;
+		display: flex;
+		flex-direction: column;
+		/*
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: stretch;
+		box-sizing: border-box;
+		background-color: blue;
+		z-index: 1;
+		/*
+		display: flex;
+		flex-direction: column;
+		*/
+	}
+	
+	.activity a{
+		display: flex;
+		flex-direction: column;
+		flex:1 1 auto;
+		width: 100%;
+		background-color: rgb(88, 15, 102);
+	}
+
 	.imgAct{
-		display: block;
+		/*
+		align-self: flex-start;
+		width: 100%;
+		height: 50px;
 		object-fit: cover;
 		box-sizing: border-box;
+		flex: 0 1 auto;
 		border-radius: 20px 20px 0px 0px;
 		box-shadow: 3px 3px 11px -3px gray;
+		*/
+		object-fit: cover;
+		background-color: blueviolet;
 	}
+	
 	.infoAct{
+		/*flex: 1 1 auto;
 		display: flex;
 		align-items: center;
+		align-self: flex-end;
 		box-sizing: border-box;
+		height: 60px;
 		flex-shrink: 0;
 		border-radius: 0px 0px 20px 20px;
-		background-color: white;
 		box-shadow: 3px 3px 11px -3px gray;
+		*/
+		
+		height: 60px;
+		background-color: white;
 	}
 		.infoAct p{
 			margin: 20px;
@@ -615,16 +653,18 @@ footer {
 		.activities{
 			height: fit-content;
 		}
-		
+/*
 			.activity {
+				
 				width: 100%;
 				height: 20vh;
 				margin: 10px;
 				margin-left: 10px;
 				margin-right: 0px;
 				margin-bottom: 40px;
+				
 			}
-
+*/
 	.search{
 		margin-top: 150px;
 	}

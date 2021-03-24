@@ -16,7 +16,8 @@ body{
 	display: flex; /* Crée un contexte flex pour ses enfants */
 	flex-direction: column; /* Affichage haut --> bas */
 	min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
-	margin: 15px; /* Marge autour de la page */
+	margin: 0; /* Reinitialisation des marges ( Fix CSS par default de Google chrome )*/
+	padding: 0px 15px 15px 15px; /* Marge autour de la page */
 	max-width: 1500px;
 }
 h1{
@@ -33,6 +34,7 @@ h3{
 	font-size: 15px;
 	font-family: Raleway-light;
 	font-family: 'Raleway:wght@300', sans-serif;
+	color: black;
 }
 p{
 	font-style:normal;
@@ -87,16 +89,19 @@ a{
 		.headerMenuItem{
 			display: flex;
 			flex-direction: column;
+			position: relative;
 		}
 
-		.headerMenuItem:not(.signup)::before{
-			content: "";
+		.headerMenuItem:not(.signup) a:before{ /* Positionné en 1er enfant a l'interieur de l'elt ciblé */  
+			content: ""; /* Obligatoire pour créer un bloc visuel */
 			display: block;
-			position: relative;
-    		bottom: 19px;
+			position: absolute;
+			
+    		top:0;
+			right: 0;
+			left: 0;
 			width: 95%;
 			height: 2px;
-			background-color: #0065FC;
 		}
 
 		.headerMenuItem a{
@@ -110,10 +115,8 @@ a{
 		}
 	
 /* TODO : Apply animation on eleemnt on other element hover */
-		.headerMenuItem a:hover .headerMenuItem:not(.signup)::before{
-			background-color: pink;
-			color : pink;
-			display: none;
+		.headerMenuItem a:hover::before{
+			background-color: #0065FC;
 		}
 
 			.signup a{
@@ -414,6 +417,10 @@ a{
 		margin: 30px;
 	}
 
+	.activities{
+		margin-bottom: 65px;
+	}
+
 	.activities--cards {
 		display: grid;
 		width: 100%;
@@ -421,15 +428,10 @@ a{
 		justify-items: stretch;
 		align-items: stretch;
 		grid-template-rows: repeat(10, 1fr);
+		grid-template-columns: repeat(4,1fr);
 		grid-column-gap: 25px;
 		grid-row-gap: 25px;
 	}
-	/*
-	.activities--cards a{
-		margin: 20px;
-		box-sizing: border-box;
-	}	
-	*/
 	
 	.div1 { grid-area: 1 / 1 / 11 / 2;}
 	.div2 { grid-area: 7 / 2 / 11 / 3;}
@@ -440,13 +442,13 @@ a{
 	.div7 { grid-area: 1 / 5 / 11 / 6;}
 
 	.activity{
-		background-color: burlywood;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+		min-width: 0; /* Reinitialisation des valeur ( Fix )
 		/*
 		display: flex;
 		width: 100%;
-		height: 100%;
 		justify-content: stretch;
 		box-sizing: border-box;
 		background-color: blue;
@@ -458,11 +460,12 @@ a{
 	}
 	
 	.activity a{
-		display: flex;
-		flex-direction: column;
 		flex:1 1 auto;
-		width: 100%;
-		background-color: rgb(88, 15, 102);
+	}
+
+	.activity h3 {
+		margin-left: 15px;
+		margin-top: 20px;
 	}
 
 	.imgAct{
@@ -477,6 +480,10 @@ a{
 		box-shadow: 3px 3px 11px -3px gray;
 		*/
 		object-fit: cover;
+		flex: 1 1 auto;
+		overflow: hidden;
+		border-radius: 20px 20px 0px 0px;
+		box-shadow: 3px 3px 11px -3px gray;
 		background-color: blueviolet;
 	}
 	
@@ -493,6 +500,9 @@ a{
 		*/
 		
 		height: 60px;
+		flex-shrink: 0;
+		border-radius: 0px 0px 20px 20px;
+		box-shadow: 3px 3px 11px -3px gray;
 		background-color: white;
 	}
 		.infoAct p{
@@ -508,6 +518,7 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 20px;
+	margin: -15px;
 	background: #F2F2F2;
 }
 
@@ -590,25 +601,32 @@ footer {
 	.headerDesktop .signup { /* espace = Parent --> enfant */
 		position: absolute;
 		right: 15px;
-		top : 10px;
+		top: 5px;
 	}
 
 	.headerMenuItem:not(.signup){	/* tous les elements du menu sauf signup */
 		align-items: center;
 		width: 100%;
 		margin : -20px -20px 20px -20px;
+		
 	}
 
-	.headerMenuItem:not(.signup)::before{
+	.headerMenuItem:not(.signup) a:before{
 		display: none;
 	}
 
-	.headerMenuItem:not(.signup)::after{
+	.headerMenuItem:not(.signup) a:after{
 		display: block;
 		content: "";
-		width: 95%;
 		height: 2px;
-		box-shadow: 3px 3px 11px -3px gray;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+		background-color: #dfdfdf;
+	}
+
+	.headerMenuItem a:hover::after{
 		background-color: #0065FC;
 	}
 
@@ -633,6 +651,11 @@ footer {
 		/*height: 5%;*/
 	}
 
+	.activities{
+		margin:20px;
+		margin-bottom: 65px;
+	}
+
 	.activities--cards {
 		display: grid;
 		height: fit-content;
@@ -644,27 +667,21 @@ footer {
 		grid-column-gap: 25px;
 		grid-row-gap: 25px;
 	}
-		.activities--cards div{
-			height: 200px;
-			width: 100%;
-			grid-area:auto;
-		}
 
 		.activities{
 			height: fit-content;
 		}
-/*
 			.activity {
-				
+				height: 200px;
 				width: 100%;
+				grid-area: auto;
+				/*
 				height: 20vh;
 				margin: 10px;
 				margin-left: 10px;
 				margin-right: 0px;
-				margin-bottom: 40px;
-				
+				margin-bottom: 40px; */
 			}
-*/
 	.search{
 		margin-top: 150px;
 	}

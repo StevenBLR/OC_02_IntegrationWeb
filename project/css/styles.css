@@ -94,7 +94,6 @@ a{
 			content: ""; /* Obligatoire pour créer un bloc visuel */
 			display: block;
 			position: absolute;
-			
     		top:0;
 			right: 0;
 			left: 0;

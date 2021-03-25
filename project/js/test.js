@@ -105,7 +105,7 @@ const gray = "#D2D2D2";
 const lightBlue = "#DEEBFF";
 const lightGray = "#F2F2F2";
 
-var hotelCurrentElt = document.getElementById("hotels__cards");
+var hotelCurrentElt = document.querySelector(".hotels__cards");
 var hotelMostPopElt = document.querySelector("#hotels--popular .hotels__cards");
 hotelCurrentElt.innerHTML = "";
 hotelMostPopElt.innerHTML = "";
@@ -135,7 +135,6 @@ function newHotelCard(hotelInfos)
 {
     // Main container
     var hotelItemElt = document.createElement("a");
-    hotelItemElt.id = "hotelItem";
     hotelItemElt.className = "hotelItem animatedHighlight";
     hotelItemElt.href ="#";
 

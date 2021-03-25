@@ -239,7 +239,7 @@ a{
 					color: #0065FC;
 				}
 
-			.filterLabel{
+			.search__filterLabel{
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -250,7 +250,7 @@ a{
 				padding-right: 15px;
 				background-color:white;
 			}
-				.filterLabel p{
+				.search__filterLabel p{
 					font-weight: bold;
 					margin-left: 30px;
 					margin-top: 15px;
@@ -264,7 +264,7 @@ a{
 		margin-top: 15px;
 		box-sizing: border-box;
 	}
-		.infoIcon{
+		.search__infoIcon{
 			display: flex;
 			justify-content: center;
 			align-content: center;
@@ -277,7 +277,7 @@ a{
 			min-width: 20px;
 			min-height: 20px;
 		}
-			.infoIcon i{
+			.search__infoIcon i{
 				margin-top: 4px;
 				color: #0065FC;
 			}

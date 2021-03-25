@@ -1,6 +1,5 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-/* font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif; */
 
 
 /* General Settings -------------------------------- */
@@ -68,15 +67,14 @@ a{
 
 /* Header -------------------------------------------- */
 
-.headerDesktop{
+.header{
 	display: flex;
-	flex-direction: row;
 }
-	.logoArea{
+	.header__logoArea{
 		flex: 1 1 auto; /* occupe la hauteur restante */
 	}
-		.logo{
-			padding: 10px;
+		.header__logo{
+			margin-top:20px;
 		}
 
 	.headerMenuArea{
@@ -106,6 +104,7 @@ a{
 
 		.headerMenuItem a{
 			margin: 20px;
+			margin-top: 40px;
 			color: #797979;
 			text-decoration: none;
 		}
@@ -517,7 +516,7 @@ footer {
 	header{
 		position: fixed;
 		top: 0px;
-		height: 125px;
+		height: 115px;
 		background-color: white;
 		width: 100%;
 		z-index: 1;
@@ -561,8 +560,12 @@ footer {
 		
 	}
 	
+	.header__logo {
+		position: absolute; /* Annulation contrainte du parent header */
+	}
+
 	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
-	.headerDesktop .signup { /* espace = Parent --> enfant */
+	.header .signup { /* espace = Parent --> enfant */
 		position: absolute;
 		right: 15px;
 		top: 5px;
@@ -571,7 +574,7 @@ footer {
 	.headerMenuItem:not(.signup){	/* tous les elements du menu sauf signup */
 		align-items: center;
 		width: 100%;
-		margin : -20px -20px 20px -20px;
+		margin : 0px -20px 20px -20px;
 		
 	}
 
@@ -590,19 +593,18 @@ footer {
 		background-color: #dfdfdf;
 	}
 
-	.headerMenuItem a:hover::after{
-		background-color: #0065FC;
+	.headerMenuItem a{
+		margin-top: 30px;
 	}
 
-	.headerDesktop{
-		flex-direction: column;
+	.headerMenuItem a:hover::after{
+		background-color: #0065FC;
 	}
 
 	.headerMenuArea{
 		flex: auto;
 		width: 100%;
-		margin-top: 15px;
-		margin-bottom: 15px;
+		margin-top: 80px;
 	}
 	
 	

@@ -283,7 +283,7 @@ a{
 			}
 
 /* (H) Hebergements ----------------------------------- */
-.wrapper {
+.hotels{
 	flex: 1 1 auto; /* Flex grow ( Faculté agrandiss* / Flex Shrink ( Faculté retressiss* / Flex Basis ( Taill init )*/
 	display: flex; /* crée un contexte flex pour ses enfants */
 	flex-direction: row; /* Affichage gauche --> droite */
@@ -291,7 +291,7 @@ a{
 	margin-bottom: 20px;
 	/*background-color: lightgray;*/
 }
-	.hotels--current{
+	.hotels__current{
 		display: flex; 
 		flex: 1 1 auto;
 		flex-direction: column;
@@ -302,7 +302,7 @@ a{
 		order: 1;
 	}
 
-		.hotels--current--cards{
+		.hotels__cards{
 			display: flex; 
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -372,7 +372,7 @@ a{
 				margin : 30px;
 			}
 
-		.hotels--popular .hotels--current--cards{
+		.hotels--popular .hotels__cards{
 			display: flex;
 			flex-direction: column;
 			height: 100%;
@@ -508,7 +508,7 @@ footer {
 	}
 
 	/* Hebergement */
-	.wrapper {
+	.hotels{
 		flex-direction: column;
 		box-sizing: border-box;
 	}
@@ -527,7 +527,7 @@ footer {
 		flex: 1;
 	}
 
-	.hotels--current{
+	.hotels__current{
 		order: 2;
 		min-height: 100vh;
 		margin-right: 0;
@@ -536,7 +536,7 @@ footer {
 		background-color:unset;
 	}
 
-	.hotels--current--cards{
+	.hotels__cards{
 		margin-bottom: 10px;
 	}
 

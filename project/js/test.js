@@ -105,8 +105,8 @@ const gray = "#D2D2D2";
 const lightBlue = "#DEEBFF";
 const lightGray = "#F2F2F2";
 
-var hotelCurrentElt = document.getElementById("hotels--current--cards");
-var hotelMostPopElt = document.querySelector("#hotels--popular .hotels--current--cards");
+var hotelCurrentElt = document.getElementById("hotels__cards");
+var hotelMostPopElt = document.querySelector("#hotels--popular .hotels__cards");
 hotelCurrentElt.innerHTML = "";
 hotelMostPopElt.innerHTML = "";
 

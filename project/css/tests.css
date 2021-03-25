@@ -77,20 +77,20 @@ a{
 			margin-top:20px;
 		}
 
-	.headerMenuArea{
+	.header__menuArea{
 		align-self: center; /* Positionné au centre par rapport a la hauteur du header */
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
 
-		.headerMenuItem{
+		.header__menuItem{
 			display: flex;
 			flex-direction: column;
 			position: relative;
 		}
 
-		.headerMenuItem:not(.signup) a:before{ /* Positionné en 1er enfant a l'interieur de l'elt ciblé */  
+		.header__menuItem:not(.signup) a:before{ /* Positionné en 1er enfant a l'interieur de l'elt ciblé */  
 			content: ""; /* Obligatoire pour créer un bloc visuel */
 			display: block;
 			position: absolute;
@@ -102,19 +102,19 @@ a{
 			height: 2px;
 		}
 
-		.headerMenuItem a{
+		.header__menuItem a{
 			margin: 20px;
 			margin-top: 40px;
 			color: #797979;
 			text-decoration: none;
 		}
 
-		.headerMenuItem a:hover {
+		.header__menuItem a:hover {
 			color: #0065FC;
 		}
 	
 /* TODO : Apply animation on eleemnt on other element hover */
-		.headerMenuItem a:hover::before{
+		.header__menuItem a:hover::before{
 			background-color: #0065FC;
 		}
 
@@ -132,7 +132,7 @@ a{
 		font-size: 15px;
 		margin-top: 5px;
 	}
-	.search--bar{
+	.search__bar{
 		display: flex;
 		flex-direction: row;
 		min-height: 50px;
@@ -140,7 +140,7 @@ a{
 		height: 50px;
 		margin-top: 10px;
 	}
-		.search--pinBox{
+		.search__pinBox{
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -151,7 +151,7 @@ a{
 			background-color: #F2F2F2;
 			
 		}
-		.search--textField{
+		.search__textField{
 			padding-left: 15px;
 			border: 1px solid;
 			border-color: #F2F2F2;
@@ -161,7 +161,7 @@ a{
 			font-size: 15px;
 			color: black;
 		}
-		.search--sendBt{
+		.search__sendBt{
 			height: 100%;
 			font-size: 15px;
 			border: none;
@@ -172,11 +172,11 @@ a{
 			background-color: #0065FC;
 			color: white;
 		}
-			.search--sendBt i{
+			.search__sendBt i{
 				display: none; /* Cacher un element*/
 			}
 
-			.search--sendBt span{
+			.search__sendBt span{
 				font-weight: 700;
 			}
 
@@ -187,12 +187,12 @@ a{
 			color: grey;
 		}
 
-		.searchForm{
+		.search__form{
 			display: flex;
 			width: 100%;
 		}
 
-	.search--filters{
+	.search__filters{
 		display: flex;
 		align-items: center;
 		flex : 1 1 auto;
@@ -201,17 +201,17 @@ a{
 		margin-top: 20px;
 		/*background-color: lightsalmon;*/
 	}
-		.search--filters h2{
+		.search__filters h2{
 			font-size: 18px;
 			font-weight: 700;
 			margin: 5px 10px 0px 0px;
 		}
 		
-		.search--filters a{
+		.search__filters a{
 			color: black;
 		}
 
-		.search--filterBt{
+		.search__filterBt{
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -220,12 +220,12 @@ a{
 			margin-right: 10px;
 		}
 
-		.search--filterBt:hover{
+		.search__filterBt:hover{
 			/* Anim settigs */
 			transform: scale(1.15);
 			color: #0065FC;
 		}
-			.filterIcon{
+			.search__filterIcon{
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -235,7 +235,7 @@ a{
 				background-color: #DEEBFF;
 				z-index: 1;
 			}
-				.filterIcon i{
+				.search__filterIcon i{
 					color: #0065FC;
 				}
 
@@ -257,7 +257,7 @@ a{
 					font-size: 15px;
 				}
 		
-	.search--infoMsg{
+	.search__infoMsg{
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -564,25 +564,25 @@ footer {
 		position: absolute; /* Annulation contrainte du parent header */
 	}
 
-	/* .headerMenuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
+	/* .header__menuItem.signup{ // pas d'espace = Un element dans la page qui possede les 2 classes en meme temps */
 	.header .signup { /* espace = Parent --> enfant */
 		position: absolute;
 		right: 15px;
 		top: 5px;
 	}
 
-	.headerMenuItem:not(.signup){	/* tous les elements du menu sauf signup */
+	.header__menuItem:not(.signup){	/* tous les elements du menu sauf signup */
 		align-items: center;
 		width: 100%;
 		margin : 0px -20px 20px -20px;
 		
 	}
 
-	.headerMenuItem:not(.signup) a:before{
+	.header__menuItem:not(.signup) a:before{
 		display: none;
 	}
 
-	.headerMenuItem:not(.signup) a:after{
+	.header__menuItem:not(.signup) a:after{
 		display: block;
 		content: "";
 		height: 2px;
@@ -593,15 +593,15 @@ footer {
 		background-color: #dfdfdf;
 	}
 
-	.headerMenuItem a{
+	.header__menuItem a{
 		margin-top: 30px;
 	}
 
-	.headerMenuItem a:hover::after{
+	.header__menuItem a:hover::after{
 		background-color: #0065FC;
 	}
 
-	.headerMenuArea{
+	.header__menuArea{
 		flex: auto;
 		width: 100%;
 		margin-top: 80px;
@@ -638,10 +638,10 @@ footer {
 				grid-area: auto;
 			}
 	.search{
-		margin-top: 150px;
+		margin-top: 130px;
 	}
 	
-	.search--textField{
+	.search__textField{
 		flex : 1 1 auto;
 		height: 100%;
 		width: 100%;
@@ -649,18 +649,18 @@ footer {
 		box-sizing: border-box;
 	}
 
-	.search--pinBox{
+	.search__pinBox{
 		width: 50px;
 	}
-	.search--sendBt{
+	.search__sendBt{
 		width: 50px;
 	}
 
-	.search--sendBt span{
+	.search__sendBt span{
 		display: none;	/* Cacher un element */
 	}
 
-	.search--sendBt i{
+	.search__sendBt i{
 		display: block; /* Afficher un element en mode block */
 	}
 

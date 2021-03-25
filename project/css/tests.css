@@ -469,22 +469,11 @@ a{
 	}
 
 	.imgAct{
-		/*
-		align-self: flex-start;
-		width: 100%;
-		height: 50px;
-		object-fit: cover;
-		box-sizing: border-box;
-		flex: 0 1 auto;
-		border-radius: 20px 20px 0px 0px;
-		box-shadow: 3px 3px 11px -3px gray;
-		*/
 		object-fit: cover;
 		flex: 1 1 auto;
 		overflow: hidden;
 		border-radius: 20px 20px 0px 0px;
 		box-shadow: 3px 3px 11px -3px gray;
-		background-color: blueviolet;
 	}
 	
 	.infoAct{
@@ -583,6 +572,7 @@ footer {
 		height: fit-content;
 		margin-left: 0;
 		width: 100%;
+		padding-bottom: 30px;
 	}
 
 		.hotels--popular .hotelItem{

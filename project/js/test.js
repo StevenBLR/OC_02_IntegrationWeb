@@ -106,7 +106,7 @@ const lightBlue = "#DEEBFF";
 const lightGray = "#F2F2F2";
 
 var hotelCurrentElt = document.querySelector(".hotels__cards");
-var hotelMostPopElt = document.querySelector("#hotels--popular .hotels__cards");
+var hotelMostPopElt = document.querySelector("#hotels__showroom--mostPopular .hotels__cards");
 hotelCurrentElt.innerHTML = "";
 hotelMostPopElt.innerHTML = "";
 
@@ -125,28 +125,22 @@ function populateMostPopular()
     for (var i=6; i<9;i++) hotelMostPopElt.appendChild(newHotelCard(hotels[i]));
 }
 
-// Injection des activités
-function populateActivities()
-{
-
-}
-
 function newHotelCard(hotelInfos)
 {
     // Main container
     var hotelItemElt = document.createElement("a");
-    hotelItemElt.className = "hotelItem animatedHighlight";
+    hotelItemElt.className = "hotels__hotelItem animatedHighlight";
     hotelItemElt.href ="#";
 
     // Image
     var hotelImageElt = document.createElement("img");
-    hotelImageElt.className = "hotelItem--img";
+    hotelImageElt.className = "hotels__hotelImage";
     hotelImageElt.setAttribute("alt", hotelInfos.nom);
     hotelImageElt.setAttribute("src", imgPath + hotelInfos.imgName + ".jpg");
 
     // Info section container
     var infoSectionElt = document.createElement("div");
-    infoSectionElt.className = "hotelItem--infoSection";
+    infoSectionElt.className = "hotels__infoSection";
 
     // Texts
     var titleElt = document.createElement("h3");
@@ -156,7 +150,7 @@ function newHotelCard(hotelInfos)
 
     // Stars container
     var starContainerElt = document.createElement("div");
-    starContainerElt.className = "ratingStars";
+    starContainerElt.className = "hotels__ratingStars";
 
     // Stars
     for (var i=0; i<5; i++)

@@ -99,7 +99,7 @@ var activities = [
     }
 ];
 
-const imgPath = "../imgs/hebergements/3_medium/"
+const imgPath = "../imgs/hebergements/4_small/"
 const blue = "#0065FC";
 const gray = "#D2D2D2";
 const lightBlue = "#DEEBFF";
